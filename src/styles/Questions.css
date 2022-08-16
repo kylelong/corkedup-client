@@ -1,0 +1,36 @@
+ #questionImage {
+    height: 300px;
+    width: 300px;
+    float: right;
+  }
+.questionsContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  text-align: center;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.questionContainer {
+  padding-bottom: 10px;
+}
+.question{
+ font-size: 1.5em;
+ font-weight: bolder;
+ color: #f3f3f3;
+}
+.answer{
+  font-size: 20px;
+}
+  @media screen and (max-width: 1300px) {
+    #questionImage {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 630px) {
+    .questionsContainer{
+      width: 100%;
+    }
+  }

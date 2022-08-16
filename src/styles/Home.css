@@ -1,0 +1,18 @@
+.nameContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.homeMain{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .homeContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+  }

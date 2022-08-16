@@ -1,0 +1,127 @@
+.navContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+
+
+    height: 50px;
+    width: 100%;
+    z-index: 999;
+
+    -webkit-box-shadow: 0px 0.5px 0.5px 0px #d3d3d3;
+    -moz-box-shadow: 0px 0.5px 0.5px 0px #d3d3d3;
+    box-shadow: 0px 0.5px 0.5px 0px #d3d3d3;
+}
+.navbarMenu{
+  z-index: 1000;
+  margin-right: 100px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+/* a{
+    color: black;
+} */
+.navbarMenu li{
+    display: inline;
+    font-size: 20px;
+    font-weight: 205;
+    margin-left: 20px;
+    color: black;
+}
+#menuButton{
+    z-index: 1000;
+}
+.navbarMenu li:hover, .mobileMenu li:hover, .desktopMenu li:hover{
+    cursor: pointer;
+    color: #9fbfff;
+    font-weight: bold;
+}
+.desktopMenu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 11%;
+    left: 4%;
+}
+.desktopMenu a{
+    color: black;
+}
+.desktopMenu li{
+    font-size: 20px;
+    font-weight: 205;
+    padding-top: 7px;
+    padding-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+    .sideMenuContainer{
+
+    }
+    .navContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+    }
+    .navbarMenu{
+        z-index: 1000;
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        margin-right: unset;
+      }
+      .desktopMenu{
+        flex-direction: row;
+        position: fixed;
+        top: 50px;
+
+        display: flex;
+        align-items: stretch; /* Default */
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        z-index: 100;
+      }
+      .desktopMenu a{
+
+      }
+      .desktopMenu li{
+        display: block;
+        flex: 0 1 auto; /* Default */
+        list-style-type: none;
+        padding-bottom: unset;
+      }
+      .mobileMenu{
+       width:100%;
+       background-color: white;
+       height: 100%;
+        /* -webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2); */
+      }
+      .mobileMenu li{
+        font-size: 30px;
+        cursor: pointer;
+        font-family: sans-serif;
+        color: #d3d3d3;
+        font-weight: bold;
+        text-align: center;
+    }
+      
+}
+@media screen and (max-width: 1300px){
+    .navbarMenu{
+      }
+}
+@media screen and (min-width: 769px){
+    #menuButton, .mobileMenu{
+        display: none;
+    }
+}

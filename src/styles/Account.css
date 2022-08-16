@@ -1,0 +1,30 @@
+.accountContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.cancelContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header{
+    font-size: 30px;
+    color: #5A38FD;
+    font-weight: bold;
+}
+.accountContainer p, .cancelContainer p{
+    font-size: 16px;
+}
+#cancel{
+    margin-top: 10px;
+    width: 252px !important;
+    height: 50px !important;
+}
+.error{
+    color: #808080;
+    width: 100%;
+}

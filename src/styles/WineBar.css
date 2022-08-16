@@ -1,0 +1,18 @@
+.wineBarItem{
+    margin-bottom: 5px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: 1px solid #dddfe2;
+    padding: 16px 24px;
+}
+.wineBarLink, .restaurantLink{
+    color: black;
+}
+.wineBarItem:hover{
+    color:white;
+    background-color: #9fbfff;
+}
+.price{
+    float: right;
+    color: green;
+}

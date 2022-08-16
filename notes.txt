@@ -1,0 +1,292 @@
+
+CC length info: https://stackoverflow.com/questions/72768/how-do-you-detect-credit-card-type-based-on-number#:~:text=Important%3A%20card%20numbers%20do%20vary,between%2012%20and%2019%20digits.
+https://passwordsgenerator.net/plus/
+Toggle page to show on login
+Validation: Make sure user is logged in to access pages
+https://icons8.com/illustrations/illustration/clip-lets-party
+https://icons8.com/illustrations/illustration/flame-cook-is-making-soup
+https://icons8.com/illustrations/illustration/pablita-867
+Send email notifications for deals.
+Comma seperate list: https://commaquote.azurewebsites.net/
+
+https://www.color-name.com/off-white.color
+
+npm start
+node src/wtso.js
+node app.js
+
+WTSO:
+#wine-quote
+#price 
+
+Menu (desktop & mobile) shows "home" via props on profile and no events, savings, recipes
+
+
+kU3G4VpNFR
+re6kEwyxHV
+hjA8xRm6p7
+BWhcrA3SfM
+MPYq2Txaed
+DH2EBhdFJZ
+w7BJAQ92zy
+N72Mza95Uy
+fQbTP9hMrq
+BPJr38NWV9
+aT7jPQbkSK
+aB8P6eL9kS
+HJZ4kVAEuT
+R3fBkNr62S
+fRscQ8Ftq6
+RLbHnprQ9z
+XUQbkc39vP
+pvr6zxTHUF
+WMbeS3jvRs
+mVAraez7vE
+VHKx63ghsW
+nzRvU93G26
+eyPQGHRN32
+DmT7c6q2Sw
+WX9Z4QMnK3
+W2Bn94JFPj
+q74XLzcMCV
+BK6CUNw92D
+wRVQv2tsbE
+qXdbuc37sT
+jLyKhd4TpG
+Agqe5HQSpB
+MmaLNuX6WA
+RxAXLrp8jW
+K6dLYjhfNW
+nuh3NHx5tw
+keLQZW4x5N
+qj58A4aTVH
+PqN5dvpZyg
+Jb9jvXHzkP
+e6P2UnrHAt
+Yef49B7rDm
+cgw74Av6BQ
+t8FYwcVBDH
+baML72YKFz
+SDxB2NauAr
+kn6BPEmxCr
+vN5p9mG3q7
+GfktK8uqC7
+M6T8XJ5hsu
+
+#5A38FD
+
+<svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="
+                M 0, 3
+                C 0, 0.78 0.78, 0 3, 0
+                S 6, 0.78 6, 3
+                    5.22, 6 3, 6
+                    0, 5.22 0, 3
+            " fill="#9fbfff" transform="rotate(
+                -34,
+                100,
+                100
+            ) translate(
+                97
+                97
+            )"></path></svg>
+
+            <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="
+                M 0, 15
+                C 0, 15 15, 0 15, 0
+                S 30, 15 30, 15
+                    15, 30 15, 30
+                    0, 15 0, 15
+            " fill="#9fbfff" transform="rotate(
+                -11,
+                100,
+                100
+            ) translate(
+                85
+                85
+            )"></path></svg>
+
+            <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="
+                M 0, 10
+                C 0, 0.7999999999999996 0.7999999999999996, 0 10, 0
+                S 20, 0.7999999999999996 20, 10
+                    19.2, 20 10, 20
+                    0, 19.2 0, 10
+            " fill="#9fbfff" transform="rotate(
+                31,
+                100,
+                100
+            ) translate(
+                90
+                90
+            )"></path></svg>
+
+            <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="
+                M 0, 7
+                C 0, 0.48999999999999966 0.48999999999999966, 0 7, 0
+                S 14, 0.48999999999999966 14, 7
+                    13.51, 14 7, 14
+                    0, 13.51 0, 7
+            " fill="#5A38FD" transform="rotate(
+                -24,
+                100,
+                100
+            ) translate(
+                93
+                93
+            )"></path></svg>
+
+            <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="
+                M 0, 7
+                C 0, 6.72 6.72, 0 7, 0
+                S 14, 6.72 14, 7
+                    7.28, 14 7, 14
+                    0, 7.28 0, 7
+            " fill="#5A38FD" transform="rotate(
+                -40,
+                100,
+                100
+            ) translate(
+                93
+                93
+            )"></path></svg>
+
+
+YELP:
+Clinet id: tIbaP_wswOiXzGQ1qVmbg
+API Key: 5hObF9L_APDctOtFxXOSGDWt5bfvPdBHWm7JHoI191sQ73RjayKGTtc1lr_uzkzzmeqR8j1I8UIyxTwelsrI8i_meC8u8sbB_4fHBbCs0PPlcFmnwJ2SNuzRnW5cXnYx
+
+{
+id: "UNKSIjxNh1NDnFOp7kH2fQ",
+alias: "robberbaron-san-francisco",
+name: "RobberBaron",
+image_url: "https://s3-media1.fl.yelpcdn.com/bphoto/p4vymYcZ6D2bZPD-0__9Iw/o.jpg",
+is_closed: false,
+url: "https://www.yelp.com/biz/robberbaron-san-francisco?adjust_creative=otIbaP_wswOiXzGQ1qVmbg&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=otIbaP_wswOiXzGQ1qVmbg",
+review_count: 157,
+categories: [
+{
+alias: "wine_bars",
+title: "Wine Bars"
+}
+],
+rating: 4.5,
+coordinates: {
+latitude: 37.79567,
+longitude: -122.42149
+},
+transactions: [
+"delivery"
+],
+price: "$$",
+location: {
+address1: "2032 Polk St",
+address2: "",
+address3: "",
+city: "San Francisco",
+zip_code: "94109",
+country: "US",
+state: "CA",
+display_address: [
+"2032 Polk St",
+"San Francisco, CA 94109"
+]
+},
+phone: "+14155166945",
+display_phone: "(415) 516-6945",
+distance: 122.57724999373075
+},
+
+Stripe
+rkai-qksl-spiq-dtgj-vmdw
+
+Eventbrite
+token: TYQAFS2R2P7QF5WZITFP
+url example: https://www.eventbriteapi.com/v3/users/me/?token=TYQAFS2R2P7QF5WZITFP
+HTTP example
+GET /v3/users/me HTTP 1.1 
+Host: www.eventbriteapi.com 
+Authorization: Bearer TYQAFS2R2P7QF5WZITFP
+
+https://www.eventbriteapi.com/v3
+
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import EventsHeader from './EventsHeader';
+import Navigation from '../Navigation';
+import SideMenu from '../SideMenu';
+
+const Events = () => {
+    // test with zipCode -> cleanUrls with urls array -> promise array with promises containing clean urls
+    const [zipCode, setZipCode] = useState("94109")
+    const [urlData, setUrlData] = useState([]);
+    const [cleanUrls, setCleanUrls] = useState([]);
+// add async await
+    useEffect(() => {
+        axios.get("/test", {params: { zipCode: zipCode} })
+        .then((response) => {
+            setUrlData(response.data)
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+
+
+    }, [])
+    //#endregion
+    const cleanUrl = async (url) => {
+        // const response = await  axios.get("/cleanUrl", {params: { url: url } });
+        // const data = await response.data;
+        // return data;
+
+        axios.get("/cleanUrl", {params: { url: url } })
+        .then((response) => {
+            console.log(response.data)
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+
+    }
+    //#endregion
+    useEffect(() => {
+        let urls = []
+        for(const url of urlData){
+            cleanUrl(url);
+            // if(data != null){
+            //     let clean_url = cleanUrl(url);
+            //     urls.push(clean_url);
+            // }
+            
+        }
+
+        Promise.all(urls).then((response) => {
+           console.log(response);
+        }).catch(err => {
+            console.log(err);
+        })
+
+
+    }, [urlData])
+
+
+    return (
+        <div>
+            <Navigation />
+            <EventsHeader />
+            <SideMenu />
+            <div>
+                {/* { 
+
+                cleanUrls.map((url, i) => {
+                    return (
+                        <p key={i}>{url}</p>
+                    )
+                })
+
+                } */}
+            </div>
+        </div>
+    );
+};
+
+export default Events;

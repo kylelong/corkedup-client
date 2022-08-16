@@ -1,0 +1,47 @@
+
+
+/* Corked up in Logo.js */
+#name{
+  font-size: 43px;
+  /* font-family: 'Dancing Script', cursive; */
+  /* font-family: 'Pacifico', cursive; */
+  font-family: 'Sacramento', cursive;
+  /* font-family: "Helvetica Neue", Arial, sans-serif; */
+  color: #9fbfff;
+  z-index: 1000;
+  padding-top: 10px;
+
+  font-weight: bold;
+}
+#largeName{
+  font-size: 75px;
+  /* font-family: 'Dancing Script', cursive; */
+  /* font-family: 'Pacifico', cursive; */
+  font-family: 'Sacramento', cursive;
+  /* font-family: "Helvetica Neue", Arial, sans-serif; */
+  color: #9fbfff;
+  z-index: 1000;
+  padding: 0; 
+  margin: 0;
+  font-weight: bold;  
+}
+.nameContainer{
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*  header for events, savings, recipes */
+.pageHeader{
+  text-align: center;
+}
+@media screen and (max-width: 768px){
+  .pageImg{
+     width: 485px;
+    height: 307.85px; 
+  }
+  #name {
+    margin-left: 10px;
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,14 @@
+make server code all in index.js 
+LoginForm make redirect bars if valid credentials
+
+events
+set up express server on netlify
+user accounts (login, signup)
+stripe
+zipcode storage 
+add phone number and twilio for account verification 
+security for form
+help email address
+actaully logging in and out on click
+
+can't enter access code and card, maybe get rid of access code

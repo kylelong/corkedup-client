@@ -1,0 +1,109 @@
+#chef{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 480px;
+    height: 350px;
+}
+.recipeHeader{
+    font-size: 30px;
+    font-weight: 550;
+}
+#recipeDesc{
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+#recipeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding-top: 40px;
+}
+#recipeMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+#recipeMain p {
+    max-width: 567px;
+    padding-bottom: 10px;
+}
+.recipeDescription{
+    color: #808080;
+    font-weight: bold;
+    width: 300px;
+  
+}
+.recipeImage{
+    width: 567px;
+    height: 709px;
+    border-radius: 5px;
+}
+.recipeBtn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 250px;
+    border-radius: .25rem;
+    padding: .625rem 1.25rem;
+    margin-top: 8px;
+    margin-bottom: 2px;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 16px;
+    border: 1px solid #5A38FD;
+    color: #9fbfff;
+    background-color: white;
+    cursor: pointer;
+}
+.recipeBtn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #9fbfff;
+}
+
+.recipeList {
+    list-style-type: number;
+    max-width: 500px;
+}
+.recipeInstructions{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.source{
+    color:#5A38FD;
+}
+.source:hover{
+    color: #9fbfff;
+}
+@media screen and (max-width: 767px){
+    .recipeImage{
+        width: 100%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+    #recipeDesc{
+        width: 72%;
+        margin-left:29px
+    }
+    #recipeMain, #recipeInstructions, .recipeList{
+        padding: 10px 10px;
+        padding-left: 20px;
+    }
+    #chef {
+        padding-top: 35px;
+    }
+}
+@media screen and (max-width: 630px){
+    #chef {
+     width: 100%;
+     height: auto;
+    }
+ }

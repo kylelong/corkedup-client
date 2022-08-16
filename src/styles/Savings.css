@@ -1,0 +1,93 @@
+#savings{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 20px;
+    width: 500px;
+    padding-bottom: 20px;
+}
+.savingsLink{
+    color:black;
+}
+.savingsLink:hover{
+    font-weight: bolder;
+}
+.savingsContainer {
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+ /* margin-top: 20px;
+ margin-left: 50px; */
+ padding-top: 40px;
+}
+.saveItemsContainer{
+    margin-left: 45px;
+}
+
+@media screen and (max-width: 768px) {
+    #savings{
+       padding-top: 35px;
+    }
+}
+#wtso{
+max-width: 500px;
+padding-bottom: 5px;
+}
+#wtso-img{
+    height: 350px;
+    width: 185px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+#lastbottle-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+.savingsTitle{
+    font-size: 20px;
+    font-weight: 700;
+}
+.purchaseBtn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 250px;
+    border-radius: .25rem;
+    padding: .625rem 1.25rem;
+    margin-top: 8px;
+    margin-bottom: 2px;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 16px;
+    border: 1px solid #5A38FD;
+    color: #9fbfff;
+    background-color: white;
+    cursor: pointer;
+
+    
+}
+.purchaseBtn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #9fbfff;
+}
+@media screen and (max-width: 767px){
+    #wtso{
+        width: auto;
+        padding: 10px 10px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+    }
+}
+@media screen and (max-width: 630px){
+    #savings {
+     width: 100%;
+     height: auto;
+    }
+ }
