@@ -3,7 +3,7 @@ const cors = require('cors')
 const cheerio = require('cheerio');
 const axios = require('axios');
 const app = express();
-const port = 5001;
+const port = process.env.PORT || 5001;
 let yelpAPI = require('yelp-api');
 
 app.use(cors())
