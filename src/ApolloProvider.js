@@ -3,7 +3,7 @@ import App from './App';
 import { InMemoryCache, createHttpLink, ApolloClient, ApolloProvider } from '@apollo/client';
 
 const httpLink = createHttpLink({
-    uri: 'http://localhost:5000'
+    uri: 'https://frozen-peak-56140.herokuapp.com/'
 })
 
 const client = new ApolloClient({
