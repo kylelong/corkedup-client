@@ -38,7 +38,7 @@ function SignUp(props) {
     const [addUser, { loading }] = useMutation(REGISTER_USER, {
         update(_, { data: { register : userData} }){
             context.login(userData);
-            history.push('/payment');
+            history.push('/bars');
         },
         onError({ graphQLErrors }){
             if(graphQLErrors){
