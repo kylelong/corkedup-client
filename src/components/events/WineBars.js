@@ -27,7 +27,7 @@ const WineBars = () =>  {
 
     const classes = useStyles();
     useEffect(() => {
-        axios.get("/winebars", {params: { zipCode: zipCode} })
+        axios.get("/.netlify/functions/api/winebars", {params: { zipCode: zipCode} })
         .then((response) => {
             setData(response.data)
         })

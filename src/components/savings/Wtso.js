@@ -29,7 +29,7 @@ class WTSO extends Component {
             link: data.link,
             discount: data.discount
          })
-        axios.get("/wtso")
+        axios.get("/.netlify/functions/api/wtso")
         .then((response) => {
             console.log(response.data);
             this.setState({

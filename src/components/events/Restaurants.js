@@ -28,7 +28,7 @@ const Restaurants = () =>  {
     const classes = useStyles();
 
     useEffect(() => {
-        axios.get("/restaurants", {params: { zipCode: zipCode} })
+        axios.get("/.netlify/functions/api/restaurants", {params: { zipCode: zipCode} })
         .then((response) => {
             setData(response.data)
         })

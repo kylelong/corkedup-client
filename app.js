@@ -6,6 +6,8 @@ const app = express();
 const port = process.env.PORT || 5001;
 let yelpAPI = require('yelp-api');
 
+const { YELP_API_KEY } = require('../config.js');
+
 app.use(cors())
 
 app.get("/wtso", function(req, res) {
@@ -71,8 +73,7 @@ app.get("/test", function(req, res) {
     // http://localhost:5000/test?zipCode=94109
     let { zipCode } = req.query;
         // Create a new yelpAPI object with your API key
-        let apiKey = '5hObF9L_APDctOtFxXOSGDWt5bfvPdBHWm7JHoI191sQ73RjayKGTtc1lr_uzkzzmeqR8j1I8UIyxTwelsrI8i_meC8u8sbB_4fHBbCs0PPlcFmnwJ2SNuzRnW5cXnYx';
-        let yelp = new yelpAPI(apiKey);
+        let yelp = new yelpAPI(YELP_API_KEY);
 
         // Set any parameters, if applicable (see API documentation for allowed params)
         let params = [{ term: "wine bars", location: zipCode }];
@@ -153,7 +154,7 @@ app.get("/winebars/", function(req, res) {
 
         let { zipCode } = req.query;
         // Create a new yelpAPI object with your API key
-        let apiKey = '5hObF9L_APDctOtFxXOSGDWt5bfvPdBHWm7JHoI191sQ73RjayKGTtc1lr_uzkzzmeqR8j1I8UIyxTwelsrI8i_meC8u8sbB_4fHBbCs0PPlcFmnwJ2SNuzRnW5cXnYx';
+        let apiKey = YELP_API_KEY;
         let yelp = new yelpAPI(apiKey);
 
         // Set any parameters, if applicable (see API documentation for allowed params)
@@ -177,8 +178,7 @@ app.get("/restaurants/", function(req, res) {
 
     let { zipCode } = req.query;
     // Create a new yelpAPI object with your API key
-    let apiKey = '5hObF9L_APDctOtFxXOSGDWt5bfvPdBHWm7JHoI191sQ73RjayKGTtc1lr_uzkzzmeqR8j1I8UIyxTwelsrI8i_meC8u8sbB_4fHBbCs0PPlcFmnwJ2SNuzRnW5cXnYx';
-    let yelp = new yelpAPI(apiKey);
+    let yelp = new yelpAPI(YELP_API_KEY);
 
     // Set any parameters, if applicable (see API documentation for allowed params)
     let params = [{ categories: "restaurants, winetastingroom", location: zipCode }];
@@ -199,8 +199,7 @@ app.get("/events/", function(req, res) {
 
     let { zipCode } = req.query;
     // Create a new yelpAPI object with your API key
-    let apiKey = '5hObF9L_APDctOtFxXOSGDWt5bfvPdBHWm7JHoI191sQ73RjayKGTtc1lr_uzkzzmeqR8j1I8UIyxTwelsrI8i_meC8u8sbB_4fHBbCs0PPlcFmnwJ2SNuzRnW5cXnYx';
-    let yelp = new yelpAPI(apiKey);
+    let yelp = new yelpAPI(YELP_API_KEY);
 
     // Set any parameters, if applicable (see API documentation for allowed params)
     let params = [{ location: zipCode }];

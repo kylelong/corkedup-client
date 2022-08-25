@@ -19,7 +19,7 @@ class LastBottle extends Component {
     }
     componentDidMount(){
     
-        axios.get("/lastbottle")
+        axios.get("/.netlify/functions/api/lastbottle")
         .then((response) => {
             console.log(response.data);
             this.setState({

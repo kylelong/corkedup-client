@@ -2,7 +2,7 @@
   "name": "corkedup",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://frozen-peak-56140.herokuapp.com/",
+  "proxy": "http://localhost:9000/",
   "dependencies": {
     "@apollo/client": "^3.6.9",
     "@material-ui/core": "^4.11.3",
@@ -14,12 +14,14 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "graphql-tag": "^2.12.6",
-    "jwt-decode": "^3.1.2",
+    "http-proxy-middleware": "^2.0.6",
+    "netlify-lambda": "^2.0.15",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "4.0.2",
+    "serverless-http": "^3.0.2",
     "stripe": "^8.197.0",
     "toad-scheduler": "^1.5.0",
     "twit": "^2.2.11",
@@ -29,8 +31,9 @@
     "yelp-api": "^1.0.3"
   },
   "scripts": {
+    "api:serve": "netlify-lambda serve .netlify/functions",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "netlify-lambda build .netlify/functions && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

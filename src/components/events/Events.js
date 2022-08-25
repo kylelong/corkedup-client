@@ -25,7 +25,7 @@ const Events = () => {
 // get urls
     useEffect(() => {
         console.log("getting url data...", zipCode)
-        axios.get("/test", {params: { zipCode: zipCode} })
+        axios.get("/.netlify/functions/api/test", {params: { zipCode: zipCode} })
         .then((response) => {
             console.log(response.data)
             setUrlData(response.data)
