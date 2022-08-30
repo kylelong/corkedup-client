@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, BrowserRouter as Router, Switch, Link, BrowserRouter } from "react-router-dom";
+import { Switch, HashRouter } from "react-router-dom";
 import LandingPage from './components/landing_page/LandingPage';
 import SignUp from './components/SignUp';
 import Payment from './components/Payment';
@@ -18,7 +18,7 @@ function App() {
   
   return (
   <AuthProvider>
-        <BrowserRouter>
+        <HashRouter>
     <div>
       <Switch>
           <AuthRoute exact path="/" exact component={LandingPage} />
@@ -33,7 +33,7 @@ function App() {
         </Switch>
     </div>
 
-    </BrowserRouter>
+    </HashRouter>
   </AuthProvider>
   );
 }
