@@ -2,8 +2,51 @@
 	command = "npm run build"
 	functions = "lambda"
 	publish = "build"
+
 [[redirects]]
-	from="/*"
-	to="/#/*"
+	from="/bars"
+	to="/#/bars"
+	status = 301
+	force = true
+
+[[redirects]]
+	from="/savings"
+	to="/#/savings"
+	status = 301
+	force = true
+
+[[redirects]]
+	from="/restaurants"
+	to="/#/restaurants"
+	status = 301
+	force = true
+
+[[redirects]]
+	from="/signup"
+	to="/#/signup"
+	status = 301
+	force = true
+
+[[redirects]]
+	from="/events"
+	to="/#/events"
+	status = 301
+	force = true
+
+[[redirects]]
+	from="/recipes"
+	to="/#/recipes"
+	status = 301
+	force = true
+
+[[redirects]]
+	from="/account"
+	to="/#/account"
+	status = 301
+	force = true
+
+[[redirects]]
+	from="/payment"
+	to="/#/payment"
 	status = 301
 	force = true
