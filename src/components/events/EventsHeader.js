@@ -3,7 +3,7 @@ import party from '../../assets/birthday.png';
 import '../../styles/EventsHeader.css';
 import { Link } from 'react-router-dom';
 const EventsHeader = ({headline}) => {
-    const path = window.location.pathname.substr(1)
+    const path = window.location.hash.substr(2)
     
         let header = "EVENTS";
         
