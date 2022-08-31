@@ -5,12 +5,21 @@ const axios = require('axios');
 const app = express();
 const port = process.env.PORT || 5001;
 let yelpAPI = require('yelp-api');
+const cache = require('memory-cache');
 
 const { YELP_API_KEY } = require('../config.js');
 
 app.use(cors())
 
 app.get("/wtso", function(req, res) {
+
+    let key = 'wtso_' + req.originalUrl || req.url;
+
+    let cachedResult = cache.get(key);
+    if(cachedResult){
+        res.send(cachedResult);
+        return;
+    }
 
     axios
     .get("https://www.wtso.com")
@@ -20,13 +29,23 @@ app.get("/wtso", function(req, res) {
         let src = $('#current-offer-bottle-image').attr().src;
         let quote = $('#wine-quote').text().trim();
         let price = $("#price").text();
+
         let hash = {image: src, quote: quote, price: price}; 
-        res.send(hash);
+ 
+        if(cachedResult){
+            res.send(cachedResult);
+            return;
+        } else{
+            cache.put(key, hash);
+            res.send(hash);
+        }
+
 
     })
     .catch((err) => {
         console.log(err);
     });
+
 
 
 });
@@ -98,6 +117,13 @@ app.get("/test", function(req, res) {
 
 app.get("/lastbottle", function(req, res) {
 
+    let key = 'last_bottle_' + req.originalUrl || req.url;
+    let cachedResult = cache.get(key);
+    if(cachedResult){
+        res.send(cachedResult);
+        return;
+    } 
+
     axios
     .get("https://www.lastbottlewines.com/")
     .then((response) => {
@@ -140,8 +166,17 @@ app.get("/lastbottle", function(req, res) {
         // console.log(info, technical_details);
 
         let hash = {name: name, image: image, price: price, details: details, technical_details: technical_details};
-        // console.log(hash);
-        res.send(hash);
+
+        if(cachedResult){
+            res.send(cachedResult);
+            return;
+        } else{
+            cache.put(key, hash);
+            res.send(hash);
+        }
+   
+
+        
 
     })
     .catch((err) => {
@@ -152,24 +187,37 @@ app.get("/lastbottle", function(req, res) {
 
 app.get("/winebars/", function(req, res) {
 
-        let { zipCode } = req.query;
-        // Create a new yelpAPI object with your API key
-        let apiKey = YELP_API_KEY;
-        let yelp = new yelpAPI(apiKey);
+    let { zipCode } = req.query;
+    // Create a new yelpAPI object with your API key
+    let apiKey = YELP_API_KEY;
+    let yelp = new yelpAPI(apiKey);
 
-        // Set any parameters, if applicable (see API documentation for allowed params)
-        let params = [{ term: "wine bars", location: zipCode }];
+    // Set any parameters, if applicable (see API documentation for allowed params)
+    let params = [{ term: "wine bars", location: zipCode }];
 
-        // Call the endpoint
-        yelp.query('businesses/search', params)
-        .then(data => {
-        // Success
+    let key = 'wine_bars_' + req.originalUrl || req.url;
+    let cachedResult = cache.get(key);
+    if(cachedResult){
+        res.send(cachedResult);
+        return;
+    }
+
+    // Call the endpoint
+    yelp.query('businesses/search', params)
+    .then(data => {
+    // Success
+    if(cachedResult){
+        res.send(cachedResult);
+        return;
+    } else{
+        cache.put(key, data);
         res.send(data);
-        })
-        .catch(err => {
-        // Failure
-        console.log(err);
-        });
+    }
+    })
+    .catch(err => {
+    // Failure
+    console.log(err);
+    });
 
 });
 //#endregion
@@ -183,11 +231,25 @@ app.get("/restaurants/", function(req, res) {
     // Set any parameters, if applicable (see API documentation for allowed params)
     let params = [{ categories: "restaurants, winetastingroom", location: zipCode }];
 
+    let key = 'restaurants_' + req.originalUrl || req.url;
+    let cachedResult = cache.get(key);
+    if(cachedResult){
+        res.send(cachedResult);
+        return;
+    }
+
     // Call the endpoint
     yelp.query('businesses/search', params)
     .then(data => {
     // Success
-    res.send(data);
+
+    if(cachedResult){
+        res.send(cachedResult);
+        return;
+    } else{
+        cache.put(key, data);
+        res.send(data);
+    }
     })
     .catch(err => {
     // Failure
