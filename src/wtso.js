@@ -98,7 +98,7 @@ const task = new Task('wtso scraper', () => {
     })
 })
 let fast = false;
-let job = new SimpleIntervalJob({ minutes: 30, }, task)
+let job = new SimpleIntervalJob({ minutes: 10, }, task)
 if(fast){
     job = new SimpleIntervalJob({ seconds: 3, }, task)
 } 
