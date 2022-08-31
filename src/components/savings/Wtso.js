@@ -31,7 +31,6 @@ class WTSO extends Component {
          })
         axios.get("/.netlify/functions/api/wtso")
         .then((response) => {
-            console.log(response.data);
             this.setState({
                 src: response.data.image,
                 price: response.data.price,

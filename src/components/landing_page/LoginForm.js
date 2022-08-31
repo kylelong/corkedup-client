@@ -54,6 +54,7 @@ const [loginUser, { loading }] = useMutation(LOGIN_USER, {
 
 function loginUserCallback() {
   loginUser();
+  console.log(errors);
 }
 
   return (

@@ -21,7 +21,6 @@ class LastBottle extends Component {
     
         axios.get("/.netlify/functions/api/lastbottle")
         .then((response) => {
-            console.log(response.data);
             this.setState({
                 name:response.data.name,
                 image: response.data.image,
