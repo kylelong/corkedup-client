@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Navigation from '.././Navigation';
-import savings from '../../assets/savings.png';
 import '../../styles/Savings.css';
 import axios from 'axios';
+import Loader from '../Loader';
 
 
 class LastBottle extends Component {
@@ -14,7 +13,8 @@ class LastBottle extends Component {
             price:'',
             image:'',
             details:'',
-            technical_details: []
+            technical_details: [],
+            loading: true
         }
     }
     componentDidMount(){
@@ -26,7 +26,8 @@ class LastBottle extends Component {
                 image: response.data.image,
                 price: response.data.price,
                 details: response.data.details,
-                technical_details: response.data.technical_details
+                technical_details: response.data.technical_details,
+                loading: false
             });
             if(this.state.price.length == 4){
                 this.setState({price: this.state.price.substring(2)})
@@ -39,10 +40,10 @@ class LastBottle extends Component {
 
     
     render() {
-        const loading = this.state.src == ''
+
         return (
             <div>
-            {loading ? <p>Loadng...</p> :
+            {this.state.loading ? <Loader /> :
             <a href="https://www.lastbottlewines.com/" target="_blank" className="savingsLink">
                 <div id="wtso">
                         <p className="savingsTitle">{this.state.name}</p>

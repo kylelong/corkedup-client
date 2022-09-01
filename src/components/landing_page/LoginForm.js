@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import { Link, useHistory } from "react-router-dom";
+import Loader from '../Loader';
 
 import gql from 'graphql-tag';
 import { useMutation } from "@apollo/client";
@@ -24,6 +25,7 @@ export default function LoginForm(props) {
   const context = useContext(AuthContext);
   const classes = useStyles();
   const [errors, setErrors] = useState({})
+  const [redirect, setRedirect] = useState(false);
   const history = useHistory();
 
   const {onChange, onSubmit, values } = useForm(loginUserCallback, {
@@ -36,8 +38,9 @@ const [loginUser, { loading }] = useMutation(LOGIN_USER, {
   update(_, 
     { 
       data: {login: userData}}) {
-
+    
     context.login(userData);
+    setRedirect(true);
     history.push('/bars');
   },
   onError({ graphQLErrors, networkError }){
@@ -54,7 +57,6 @@ const [loginUser, { loading }] = useMutation(LOGIN_USER, {
 
 function loginUserCallback() {
   loginUser();
-  console.log(errors);
 }
 
   return (
@@ -70,12 +72,21 @@ function loginUserCallback() {
        }
 
         <div className="buttons">
-          <button className="button is-info is-light is-medium is-fullwidth" type="submit">Login</button>
+
+          
+          {
+            redirect ? <Loader button={true} /> : 
+          
+           <button className="button is-info is-light is-medium is-fullwidth" type="submit">Login</button>
+          
+          }
+
         </div>
 
         {   errors.hasOwnProperty("general") &&
           <span className="error">{errors.general}</span>
        }
+       {}
 
         <Link to="/signup">Don't have an account? Sign up</Link>
 

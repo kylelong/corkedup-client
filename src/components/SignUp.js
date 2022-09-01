@@ -9,6 +9,7 @@ import gql from 'graphql-tag';
 import { useMutation } from "@apollo/client";
 import { useForm } from '../util/hooks'
 import { AuthContext } from '../context/auth';
+import Loader from './Loader';
 //TODO: check if already logged in before visiting this page
 //make sure user exists in db before redirectin to home
 const useStyles = makeStyles((theme) => ({
@@ -26,6 +27,7 @@ function SignUp(props) {
     const classes = useStyles();
     const [errors, setErrors] = useState({});
     const history = useHistory();
+    const [redirect, setRedirect] = useState(false);
 
     const {onChange, onSubmit, values } = useForm(registerUser, {
         firstName: '',
@@ -38,6 +40,7 @@ function SignUp(props) {
     const [addUser, { loading }] = useMutation(REGISTER_USER, {
         update(_, { data: { register : userData} }){
             context.login(userData);
+            setRedirect(true);
             history.push('/bars');
         },
         onError({ graphQLErrors }){
@@ -92,7 +95,13 @@ function SignUp(props) {
                     </span>
 
                     <div className="buttons">
-                        <button className="button is-info is-light is-medium is-fullwidth" type="submit">Sign up</button> 
+                        {
+                            redirect ? <Loader button={true} /> : 
+                            (
+                                <button className="button is-info is-light is-medium is-fullwidth" type="submit">Sign up</button> 
+                            )
+                        }
+             
                     </div>
                        
                     <Link to="/">Already an account? Sign in</Link>

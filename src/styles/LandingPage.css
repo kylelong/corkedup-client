@@ -117,7 +117,7 @@
     width: 100%;
   
   }
-  #features, #faq {
+  #features{
     padding-top: 35px;
     width: 100vw;
     margin-top: 30px;
@@ -125,8 +125,16 @@
     min-height: 475px;
     color: #ffffff;
   }
+  #faq {
+    padding-top: 35px;
+    width: 100vw;
+    margin-top: 30px;
+    min-height: 475px;
+    background-color: #ffffff;
+    color: #9fbfff;
+  }
 
-  .sectionHeader, .faq{
+  .sectionHeader{
     color: white;
     font-size: 75px;
     font-family: 'Sacramento', cursive;
@@ -136,7 +144,16 @@
     font-weight: bold;
     text-align: center;
   }
-
+  .faq{
+    color: #9fbfff;
+    font-size: 75px;
+    font-family: 'Sacramento', cursive;
+    z-index: 1000;
+    padding: 0; 
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+  }
 /* Responsive design */
 @media screen and (max-width: 630px) {
   .row1{

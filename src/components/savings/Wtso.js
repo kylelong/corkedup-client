@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import Navigation from '.././Navigation';
-import savings from '../../assets/savings.png';
 import '../../styles/Savings.css';
 import data from '../../wtso.json';
 import axios from 'axios';
+import Loader from '../Loader';
 
 
 class WTSO extends Component {
@@ -18,7 +17,8 @@ class WTSO extends Component {
             discount: '',
             src:'',
             price: '',
-            quote: ''
+            quote: '',
+            loading: true
         }
     }
     componentDidMount(){
@@ -34,7 +34,9 @@ class WTSO extends Component {
             this.setState({
                 src: response.data.image,
                 price: response.data.price,
-                quote: response.data.quote
+                quote: response.data.quote,
+                loading: false
+
             });
         })
         .catch((error) => {
@@ -44,10 +46,11 @@ class WTSO extends Component {
 
     
     render() {
-        const loading = this.state.src == ''
+
         return (
             <div>
-            {loading ? <p>Loadng...</p> :
+            {
+            this.state.loading ? <Loader />:
             <a href={this.state.link} target="_blank" className="savingsLink">
                 <div id="wtso">
                         <p className="savingsTitle">{this.state.title}</p>
