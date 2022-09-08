@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import '../../styles/Savings.css';
-import data from '../../wtso.json';
 import axios from 'axios';
 import Loader from '../Loader';
-
 
 class WTSO extends Component {
 
@@ -22,16 +20,14 @@ class WTSO extends Component {
         }
     }
     componentDidMount(){
-        this.setState({
-            title: data.text, 
-            created_at: data.created_at,
-            rating: data.rating,
-            link: data.link,
-            discount: data.discount
-         })
         axios.get("/.netlify/functions/api/wtso")
         .then((response) => {
             this.setState({
+                title: response.data.title, 
+                created_at: response.data.created_at,
+                rating: response.data.rating,
+                link: response.data.link,
+                discount: response.data.discount,
                 src: response.data.image,
                 price: response.data.price,
                 quote: response.data.quote,

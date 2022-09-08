@@ -11,9 +11,10 @@ Comma seperate list: https://commaquote.azurewebsites.net/
 
 https://www.color-name.com/off-white.color
 
-npm start
-node src/wtso.js
-node app.js
+server: npm start
+netlify functions: npm run  api:serve
+client: cd client && npm start
+wtso: cd client &&  node src/wtso.js
 
 WTSO:
 #wine-quote
