@@ -9,7 +9,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import SideMenu from '../SideMenu';
 import Loader from '../Loader';
-import { CHARLOTTE }  from '../../cities/zipcodes.js';
 
 import { AuthContext } from '../../context/auth';
 const useStyles = makeStyles((theme) => ({
