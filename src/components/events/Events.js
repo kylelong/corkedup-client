@@ -31,27 +31,31 @@ const WineBars = () =>  {
     const classes = useStyles();
 
     const getEvents = () => {
-        axios.get('/.netlify/functions/api/test', {params: { zipCode: zipCode }})
+        axios.get('/.netlify/functions/api/events', {params: { zipCode: zipCode }})
         .then((response) => {
-            const frequencies = ["once", "daily", "weekly", "monthly", "quaterly"];
-            let content = [];
-            for(let freq of frequencies){
-                 content.push(response.data.filter(item => item.frequency === freq));
+            if(response.data.error){
+                setData(response.data);
+            } else{
+                const frequencies = ["once", "daily", "weekly", "monthly", "quaterly"];
+                let content = [];
+                for(let freq of frequencies){
+                     content.push(response.data.filter(item => item.frequency === freq));
+                }
+               content = [].concat.apply([], content)
+               setData(content);
             }
-           content = [].concat.apply([], content)
 
-           setData(content);
 
         })
         .catch((error) => {
             console.log(error);
         })
     }
-    
 
     useEffect(() => {
        setLoading(false);
        getEvents();
+
 
     }, [zipCode])
     const onChange = (e) => {
@@ -105,13 +109,13 @@ const WineBars = () =>  {
 
                         </form>
                             {data.error ? 
-                            <div>
-                                <p>Zipcode <span className='zipCodeText'>{zipCode}</span> is in a city that is not supported</p>
+                            <div className='notSupportedContainer'>
+                                <p id="notSupported">Zipcode <span className='zipCodeText'>{zipCode}</span> is in a city that is not supported</p>
                                 <p>Corked Up cities:</p>
                                 {
                                     data.cities.map((item, index) => {
                                         return (
-                                            <p key={index}>{item}</p>
+                                            <p className="supportedCities" key={index}>{item}</p>
                                         )
                                     })
                                 }

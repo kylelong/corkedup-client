@@ -2,3 +2,13 @@
     color:#5A38FD;
     font-weight: bold;
 }
+.supportedCities{
+    color: #525f7f;
+    font-weight: bold;
+}
+.notSupportedContainer{
+    margin-top: 2px;
+}
+#notSupported{
+    margin-bottom: 10px;
+}
