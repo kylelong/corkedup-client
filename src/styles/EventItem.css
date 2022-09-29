@@ -18,7 +18,8 @@
 }
 .eventItemContainer:hover{
     color:white;
-    background-color: #9fbfff;
+    background-color: #F0F0F0;
+    cursor: pointer;
 }
 .rowOne{
     display: flex;
@@ -42,4 +43,12 @@
 #frequency {
     color:#5A38FD;
     font-weight: bold;
+}
+.detailsContainer a{
+    color: #9fbfff;
+    font-weight: bold;
+    /* text-decoration: none; */
+}
+.detailsContainer{
+    margin-top: 5px;
 }

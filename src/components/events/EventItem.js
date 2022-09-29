@@ -33,10 +33,12 @@ return (
         </div>
 
 
-        <div>
+        <div className='detailsContainer'>
             {address && <a href={`https://maps.google.com/?q=${address}`} target="_blank">{address}</a>}
             <br />
             {phone && <a href={`tel:${phone}`}>{phone}</a>}
+            <br />
+            <a href={url} target="_blank">more details</a>
         </div>
 
         
