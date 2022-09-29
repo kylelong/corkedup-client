@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import savings from '../assets/savings.png';
 import '../styles/Savings.css';
 import WTSO from './savings/Wtso';
 import LastBottle from './savings/LastBottle';
@@ -24,7 +23,7 @@ class Savings extends Component {
             <>
                  <Navigation />
                  <div className="savingsContainer">
-                    <img id="savings" src={savings} className="pageImg"/>
+                    <img id="savings" src="https://s3.amazonaws.com/corkedup.wine/assets/savings.png" className="pageImg"/>
                     <SideMenu />
                     <div className="saveItemsContainer">
                     <WTSO/>

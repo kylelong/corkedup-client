@@ -1,6 +1,4 @@
 import React from 'react';
-import dinner from '../assets/dinner.png';
-import chickenPaillard from "../assets/chicken_paillard.jpg"
 import '../styles/Recipes.css';
 import SideMenu from './SideMenu';
 import Navigation from './Navigation';
@@ -29,14 +27,14 @@ const Recipes = () => {
                 <SideMenu />
 
                 <div id="recipeContainer">
-                <img id="chef" src={dinner}  className="pageImg"/>
+                <img id="chef" src="https://s3.amazonaws.com/corkedup.wine/assets/dinner.png" className="pageImg"/>
                     <p id="recipeDesc">Weekly tailored recipes to expand your palette with a delicious bottle of wine</p>
                     
                     <div id="recipeMain">
                         <p className="recipeHeader">Chicken Paillard</p>
                             <p className="recipeDescription">Butterlfy chicken breast with basil tomatoes and balsimc vingear arugula</p>
-                            <img src={chickenPaillard} className="recipeImage"/>
-                        <p>This quick dish is simple, light yet so delicious and filling. The savory tastiness from the garlic and oily basil tomatoes and argula dances well with the juicy chicken breast. 
+                            <img src="https://s3.amazonaws.com/corkedup.wine/assets/chicken_paillard.jpg" className="recipeImage"/>
+                        <p className="recipeParagraph">This quick dish is simple, light yet so delicious and filling. The savory tastiness from the garlic and oily basil tomatoes and argula dances well with the juicy chicken breast. 
                             The crisp acidicity from a rich glass of Chardonnay with notes of lemon,light honey & butter, and apricot flows beautifully with the meal. </p>
                         <p className="recipeSectionHeader">Varietal: Chardonnay</p>
                         <p className="recipeSectionHeader">Wines:</p>

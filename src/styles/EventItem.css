@@ -1,0 +1,45 @@
+.eventItemContainerLink{
+    text-decoration: none;
+    all: unset;
+}
+.eventItemContainerLink:hover{
+    cursor: pointer;
+}
+
+.eventItemContainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: 1px solid #dddfe2;
+    padding: 16px 24px;
+
+}
+.eventItemContainer:hover{
+    color:white;
+    background-color: #9fbfff;
+}
+.rowOne{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.details{
+    margin-bottom: 10px;
+}
+.eventDays{
+    padding-bottom: 3px;
+}
+#venue{
+    color: #525f7f;
+    font-weight: bold;
+}
+#type, .eventDays, .details{
+    color: #525f7f;
+}
+#frequency {
+    color:#5A38FD;
+    font-weight: bold;
+}

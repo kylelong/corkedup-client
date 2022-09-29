@@ -2,14 +2,13 @@
 
 /* Corked up in Logo.js */
 #name{
-  font-size: 43px;
+  font-size: 34px;
   /* font-family: 'Dancing Script', cursive; */
   /* font-family: 'Pacifico', cursive; */
   font-family: 'Sacramento', cursive;
   /* font-family: "Helvetica Neue", Arial, sans-serif; */
   color: #9fbfff;
   z-index: 1000;
-  padding-top: 10px;
 
   font-weight: bold;
 }
@@ -43,5 +42,6 @@
   #name {
     margin-left: 10px;
     font-size: 30px;
+    padding-top: unset;
   }
 }

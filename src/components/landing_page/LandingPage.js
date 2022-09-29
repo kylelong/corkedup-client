@@ -1,4 +1,3 @@
-import wineParty from '../../assets/wine_date.svg';
 import LargeLogo from '../LargeLogo';
 import '../../styles/LandingPage.css';
 
@@ -19,7 +18,7 @@ function LandingPage() {
               <LoginForm />
         </div>
         <div className="photoContainer">
-          <img id="wineParty" src={wineParty}/>
+          <img id="wineParty" src="https://s3.amazonaws.com/corkedup.wine/assets/wine_date.svg"/>
         </div>
 
         </div>

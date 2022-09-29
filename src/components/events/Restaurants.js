@@ -44,6 +44,10 @@ const Restaurants = () =>  {
         const { name, value } = e.target;
         setZipCodeSave(false);
         if(name === "zipcode"){
+            if(value === "" || value.length == 0){
+                setZipCode(user.zipCode);
+            }     
+            
             if(value.length  === 5){
                 const regEx = /^[0-9]{5}$/;
                 if(value.match(regEx)){
