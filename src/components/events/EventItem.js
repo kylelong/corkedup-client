@@ -10,6 +10,7 @@ return (
         </div>
 
         <div className="details">
+       {event !== type ? <p className='event'>{event}</p> : ""}
          { details.length > 0 &&
              details.map((item, index) => {
                 return (

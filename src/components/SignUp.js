@@ -80,7 +80,7 @@ function SignUp(props) {
                 {   errors.hasOwnProperty("zipCode") &&
                        <p className="error">{errors.zipCode}</p>
                 }
-                <p className="explain">for accurate wine reccommendations</p>
+                <p className="explain">for accurate event recommendations</p>
                 <TextField id="outlined-basic" label="Email" variant="outlined" name="email" onChange={onChange} />
                 {   errors.hasOwnProperty("email") &&
                        <p className="error">{errors.email}</p>
